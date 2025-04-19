@@ -72,7 +72,8 @@ library
   install-includes:    tree_sitter/api.h
   c-sources:           src/bridge.c
                      , vendor/tree-sitter/lib/src/lib.c
-  cc-options:          -std=c99
+  cc-options:          -std=c99 -D_GNU_SOURCE
+  includes:            endian.h stdio.h
 
 test-suite test
   import: common
