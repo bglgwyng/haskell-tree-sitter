@@ -69,11 +69,12 @@ library
                      , TreeSitter.Cursor
   include-dirs:        vendor/tree-sitter/lib/include
                      , vendor/tree-sitter/lib/src
+                     , vendor/tree-sitter/lib/src/portable
   install-includes:    tree_sitter/api.h
   c-sources:           src/bridge.c
                      , vendor/tree-sitter/lib/src/lib.c
-  cc-options:          -std=c99 -D_GNU_SOURCE
-  includes:            endian.h stdio.h
+  cc-options:          -std=c99
+  includes:            endian.h
 
 test-suite test
   import: common
